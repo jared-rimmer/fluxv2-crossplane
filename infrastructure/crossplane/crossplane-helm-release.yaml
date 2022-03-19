@@ -25,4 +25,5 @@ spec:
           secretKeyRef:
             name: mysecret
             key: username
-            optional: false
+            optional: false     
+            namespace: crossplane
