@@ -21,10 +21,3 @@ spec:
     replicas: 3
     extraEnvVarsCrossplane:
       SECRET_USERNAME: "TEST_SECRET"
-    env:
-      - name: SECRET_USERNAME
-        valueFrom:
-          secretKeyRef:
-            name: mysecret
-            key: username
-            optional: false 
