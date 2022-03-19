@@ -3,3 +3,4 @@ kind: Kustomization
 # namespace: crossplane
 resources:
   - crossplane-helm-release.yaml
+  - namespace.yaml
