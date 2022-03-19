@@ -19,3 +19,9 @@ spec:
       retries: 3
   values:
     replicas: 3
+    extraEnvVarsCrossplane:
+      - name: SECRET_USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: mysecret
+            key: username
