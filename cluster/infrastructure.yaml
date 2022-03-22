@@ -5,6 +5,10 @@ metadata:
   name: infrastructure
   namespace: flux-system
 spec:
+  decryption:
+    provider: sops
+    secretRef:
+    name: sops-gpg
   interval: 1m0s
   sourceRef:
     kind: GitRepository
