@@ -1,0 +1,44 @@
+apiVersion: gcp.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+    name: default
+    namespace: crossplane
+spec:
+    projectID: ENC[AES256_GCM,data:Wy1eJrJQem4Af5vr12mcAPVSAmaRHJm/VJvYq88=,iv:aqvwg6APfn9X87cJEC4vpP8i8pM5dU9hvmy+VsPz428=,tag:HzsAEWLynmfqouBV6eW1Sg==,type:str]
+    credentials:
+        source: Secret
+        secretRef:
+            namespace: crossplane
+            name: gcp-creds
+            key: creds
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2022-03-22T21:48:39Z"
+    mac: ENC[AES256_GCM,data:jgaltx+9g+ENKT53XPDEzT+pmQVFM1XdCUD8YZtj7F4eJDf/TuigIkmcLQmGDQTA+c6P2qz5v5OCsVNLCZXutRWcfdZIKRyDHOVu4frdJFhHFRqnNKL8Dpuc2/FuC6T52Le3NmMCMzufM8j6kmlL1FLnl9EKUioWIaxTbJpxHsI=,iv:X9JTV6LQNHkbwZl/Oa2T+0lyxNwA6nK26mZi5qmZi4M=,tag:1xUVSwzvFYjuFqqj4WCHAg==,type:str]
+    pgp:
+        - created_at: "2022-03-22T21:48:39Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMA8ri5aez5usRAQ/+MYMgEK6Egg8OIzeaHTsoJ282vVNmf9NOuuVdg/pAFKFZ
+            qeVTLBkKsyAdMymtLPOs1oJNQ9TMBu6zgwk/tMj7zeUP2wGvu1XwSrAgr2UGPFPk
+            DvZXoj7nUPW9sQNF5cFc6/p6XcTINfieGKi32Lt8zkQXSzkpcNNLqivUis+1xTjG
+            RydzGmKVpwXn28xZYGKdL7uHR+51qwgRCFYHuXhLLJvgCPewnepuZ0LIEbotzAGu
+            PWPrq9kR+kNJbjfxSuV1l32GjNJx/PVyuBv5uMWPslv4cvMERNYTS0rZEsTEBzp1
+            hbZuIfwfn8z+gEk8DVTOYMw56/xoPM3y2K1JmXmim8XXQpmhPTp1qvMKtQShsMGi
+            woY/gfJFmtbaPSqrQ01+RHTM16Zf6O+w5Iy1jUBa3Z4QJyBhJbzvMljB8wmdPhnf
+            F9tF0QAEArTjrvNdGZsNOYvAyET3CRx4h5YIlWoPBbKwvo8NCvVLGuvNzbUCAZnT
+            lFUrfwVFL0lI3WcmmJZM9FzRcPlWVSXuB2mmGrlrPBCKYC/W7UVDLxUS1mKY2L2q
+            tiCj9TeDFH+xC2hIp3KOUL2IkNQowwt6dkHSRFAsOsgNyzGgeNhDCpDn2FuIQiRd
+            9m+QxJsuSH9VRRW+jJiBi0s5SeJ4YamUEmG/R7bikblE2RDs+mJriArvq9Ea2m3S
+            XgEjKMX3mlZZSIw7ee/wyPkCVRAw9XFhP70069ANGwmZW4btW3LVv8VCQ3VKD6MG
+            jR6e8vi305FBYvYUpUmf7uYyzAmHzpbrC4SVXpLctQkJQNwBhaXAvNIjBc5KInA=
+            =eeRq
+            -----END PGP MESSAGE-----
+          fp: 4B17AA3EE104992EC08BF78BA535B7C7FEA2375C
+    encrypted_regex: ^(data|stringData|projectID)$
+    version: 3.7.2
