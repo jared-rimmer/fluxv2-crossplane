@@ -4,3 +4,4 @@ resources:
   - crossplane-helm-release.yaml
   - namespace.yaml
   - gcp-provider.yaml
+  - sops-gcp-provider-config.yaml
